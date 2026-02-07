@@ -1,3 +1,3 @@
 #!/bin/bash 
-timestamp=$(date +%s)
+timestamp=$(date)
 echo "the script ran at : $timestamp"
