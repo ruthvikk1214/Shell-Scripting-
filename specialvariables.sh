@@ -1,4 +1,4 @@
-!#/bin/bash 
+#!in/bash 
 ##special variables##
 echo "All args passed to the script: $@"
 echo "Number of variables passed to the script: $#"
