@@ -19,8 +19,11 @@ Validate(){
     echo "$2 success"
     fi
     }
-for package in $@
+for package in $@ 
 do 
-dnf install $package -y
+dnf list installed $package &>>$LOG_FILE
+if [ $? -ne 0 ]; then
+echo "$package is not installed, it is installing now
+dnf install $package -y &>>$LOG_FILE
 Validate  $? "$package installation"
 done
