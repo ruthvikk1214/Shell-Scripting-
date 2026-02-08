@@ -20,13 +20,14 @@ Validate(){
     fi
     }
 
-dnf install nginx -y
+dnf install nginx -y &>> $LOG_FILE
 
-Validate $? "Install nginx" &>> $LOG_FILE
+Validate $? "Install nginx"
 
-dnf install mysql -y
+dnf install mysql -y &>> $LOG_FILE
 
-Validate $? "Install mysql" &>> $LOG_FILE
+Validate $? "Install mysql"
 
-dnf install nodejs -y
-Validate $? "Install nodejs" &>> $LOG_FILE
+dnf install nodejs -y &>> $LOG_FILE
+
+Validate $? "Install nodejs" 
