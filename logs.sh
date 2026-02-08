@@ -1,8 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
 
-LOG_FOLDER="/var/log/shell-scrpiting"
-LOG_FILE="/var/log/shell-scrpiting/$0.log"
+LOG_FOLDER="/var/log/shell-scripting"
+LOG_FILE="/var/log/shell-scripting/$0.log"
 
 if [ $USERID -ne 0 ]; then
     echo "Please run the script with root user access"
